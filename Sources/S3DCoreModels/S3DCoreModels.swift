@@ -1,9 +1,11 @@
 import Foundation
 
 public struct UserItem{
+    public var id:String
     public var name:String
     public var session:SessionItem?
-    public init(name:String,session:SessionItem?=nil){
+    public init(id:String, name:String, session:SessionItem?=nil){
+        self.id = id
         self.name = name
         self.session = session
     }

@@ -11,7 +11,7 @@ import S3DCoreModels
 
 class Model:ObservableObject{
     let session = SessionItem(token: "JWTToken")
-    let user = UserItem(name:"Jhon Treedee")
+    let user = UserItem(id: "123", name:"Jhon Treedee")
     let media = MediaItem(url: URL(string:"http://www.google.com")!)
    
 }

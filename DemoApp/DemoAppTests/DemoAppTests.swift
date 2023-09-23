@@ -21,8 +21,8 @@ class DemoAppTests: XCTestCase {
 
     func testModels() throws {
         let session = SessionItem(token: "JWTToken")
-        let user = UserItem(name:"Jhon Treedee")
-        let userWithSession = UserItem(name:"Jhon Treedee",session: session)
+        let user = UserItem(id: "123", name:"Jhon Treedee")
+        let userWithSession = UserItem(id: "123", name:"Jhon Treedee",session: session)
         let media = MediaItem(url: URL(string:"http://www.google.com")!)
     }
 
