@@ -1,6 +1,6 @@
 import Foundation
 
-public struct UserItem{
+public struct UserItem:Codable,Hashable,Identifiable{
     public var id:String
     public var name:String
     public var session:SessionItem?
@@ -11,14 +11,17 @@ public struct UserItem{
     }
 }
 
-public struct SessionItem{
+public struct SessionItem:Codable,Hashable{
     public var token:String?
     public init(token:String?=nil){
         self.token = token
     }
 }
 
-public struct MediaItem{
+public struct MediaItem:Codable,Hashable,Identifiable{
+    public var id: String{
+        url.absoluteString
+    }
     public var url:URL
     public init(url:URL){
         self.url = url
