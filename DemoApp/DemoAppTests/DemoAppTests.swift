@@ -25,6 +25,12 @@ class DemoAppTests: XCTestCase {
         let userWithSession = UserItem(id: "123", name:"Jhon Treedee",session: session)
         let media = MediaItem(url: URL(string:"http://www.google.com")!)
     }
+    
+    func testSeeds() throws {
+        
+        let items = Seed.galleryItems
+    }
+    
 
   
 

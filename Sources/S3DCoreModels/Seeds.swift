@@ -10,7 +10,9 @@ import Foundation
 public enum Seed{
     public static var galleryItems:[MediaItem]{
         (1...20).map { idx in
-            MediaItem(url: URL(string:"http:\\service.com\\\(idx).jpg")!, title: "Item \(idx)")
+            let urlString = "http://www.google.com/images/\(idx).jpg"
+            let url = URL(string: urlString)!
+            return MediaItem(url: url, title: "Item \(idx)")
         }
     }
 }
