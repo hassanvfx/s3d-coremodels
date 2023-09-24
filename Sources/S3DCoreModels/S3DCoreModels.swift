@@ -22,8 +22,10 @@ public struct MediaItem:Codable,Hashable,Identifiable{
     public var id: String{
         url.absoluteString
     }
+    public var title:String?
     public var url:URL
-    public init(url:URL){
+    public init(url:URL,title:String? = nil){
         self.url = url
+        self.title = title
     }
 }
